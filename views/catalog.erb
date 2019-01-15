@@ -1,0 +1,56 @@
+
+<%from = SendGrid::Email.new(email: 'spyderkim@gmail.com')
+  to = SendGrid::Email.new(email: params[:email])
+  subject = 'Chronic Confections Catalog'
+  content = SendGrid::Content.new(
+    type: 'text/html',   
+    value: 
+    '<h1>Thank you for your interest in our products. Please feel free to ask us any questions</h1>
+    <p><strong>Cakes</strong></p>
+    <ul>
+      <li>1:Multi-tier  $999.99</li>
+      <li>2:Wedding  $99.99</li>
+      <li>3:Fruit layered $49.99</li>
+      <li>4:Classic $69.99</li>
+      <li>5:Classic Chocolate $599.99</li>
+      <li>6:Circular? $899.99</li>
+    </ul>
+
+    <p><strong>Cookies</strong></p>
+    <ul>
+      <li>1:Filled-sandwich cookie things $19.99</li>
+      <li>2:Macarons $109.99</li>
+      <li>3:Holiday Specials $279.99</li>
+      <li>4:Buddah cookies $99.99</li>
+      <li>5:Chocolate Chip $9.99</li>
+      <li>6:Chock full of Choc $39.99</li>
+    </ul>
+
+    <p><strong>Muffins</strong></p>
+    <ul>
+      <li>1:Chocolate Muffin $99.99</li>
+      <li>2:Corny Muffin $49.99</li>
+      <li>3:Velvet Muffin $8.99</li>
+      <li>4:Specialty cupcake muffins $25.99</li>
+      <li>5:Fudge Muffin $28.99</li>
+      <li>6:Candy Muffin $1.99</li>
+    </ul>
+
+    <p>
+    <a href=""> Chronic Confections </a>
+    ')
+  
+  # create mail object with from, subject, to and content
+  mail = SendGrid::Mail.new(from, subject, to, content)
+  
+  # sets up the api key
+  sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+
+  # sends the email
+  response = sg.client.mail._('send').post(request_body: mail.to_json)%>
+
+
+  
+   <center><p><strong>Thanks for your interest! You will be receiving our catalog shorty.</strong></p></center>
+
+  

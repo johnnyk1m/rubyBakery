@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chronic Confections</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet"> 
+</head>
+<body>
+
+<div class="container">
+
+<header>
+  <div class="jumbotron" class="hero">
+  <h1 class="display-4"><img src="/img/logo.png"></h1><br><br>
+  <span class="row">
+    <span class="col-2"></span>
+    <span class="col-8">
+      <p class="lead">A Passion for creating unique & custom desserts using the freshest ingredients.<br> Established 2019
+      </p>
+    </span>
+    <span class="col-2"></span>
+  </span>
+
+  <hr class="my-4">
+  <span class="row">
+    <span class="col-6">Ask about our daily specials!<br><strong>Open 6AM - 9PM at all locations</strong><br>
+    <br><strong>Denver </strong> (303) 554 - 0208
+    <br><strong>Los Angeles </strong> (323) 951 - 9513
+    <br><strong>Boston </strong> (617) 386 - 0806
+    </span>
+    <span class="col-6">
+      <a href="https://www.facebook.com"><img src="/img/facebook.png"></a>
+      <a href="https://www.instagram.com"><img src="/img/instagram.png"></a>
+      <a href="https://www.twitter.com"><img src="/img/twitter.png"></a>
+      <h5>Join us on social media and receive 10% off your first order!</h5>
+    </span>
+  </div>
+</header>
+
+<nav class="flex-row non_layout" role="navigation">
+
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" href="./">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/cakes#Cakes">Cakes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/cookies#Cookies">Cookies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/muffins#Muffins">Muffins</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/about#About">About Us</a>
+  </li>
+</ul>
+
+</nav>
+
+<p class = "non_layout">
+
+  <%= yield %>
+
+</p>
+
+  <footer>
+  <center>
+  <span class="row">
+    <span class="col-12">
+      <a href="https://www.facebook.com"><img src="/img/facebook.png"></a>
+      <a href="https://www.instagram.com"><img src="/img/instagram.png"></a>
+      <a href="https://www.twitter.com"><img src="/img/twitter.png"></a>
+    </span>
+  </span>
+  </center>
+  </footer>
+
+<%# div container close %>
+</div> 
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
